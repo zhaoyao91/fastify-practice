@@ -1,0 +1,30 @@
+{
+  "name": "fastify-practice",
+  "version": "1.0.0",
+  "description": "Practice of how to build HTTP service on fastify.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "fix": "standard --fix"
+  },
+  "keywords": [
+    "fastify",
+    "framwork"
+  ],
+  "repository": "https://github.com/zhaoyao91/fastify-practice",
+  "author": "zhaoyao91 <zhaoyao91@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "ck-env": "^1.0.0",
+    "json-schema-faker": "^0.5.0-rc15",
+    "nanoid": "^1.1.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  },
+  "peerDependencies": {
+    "fastify": "^1.8.0",
+    "fastify-plugin": "^1.2.0"
+  }
+}
