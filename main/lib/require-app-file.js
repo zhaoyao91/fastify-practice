@@ -1,4 +1,3 @@
-const fs = require('fs')
 const getAppFilePath = require('./get-app-file-path')
 
 module.exports = function (appName, filename) {

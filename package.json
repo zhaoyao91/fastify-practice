@@ -1,6 +1,6 @@
 {
   "name": "fastify-practice",
-  "version": "1.1.0-alpha1",
+  "version": "1.1.0",
   "description": "Practice of how to build HTTP service on fastify.",
   "main": "index.js",
   "scripts": {

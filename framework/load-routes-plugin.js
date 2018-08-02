@@ -1,4 +1,3 @@
-const fs = require('fs')
 const path = require('path')
 const listModuleNames = require('./lib/list-module-names')
 const buildMockRouteHandler = require('./build-mock-route-handler')
