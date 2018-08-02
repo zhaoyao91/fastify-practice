@@ -2,7 +2,7 @@ const loadPluginsPlugin = require('./load-plugins-plugin')
 const loadRoutesPlugin = require('./load-routes-plugin')
 
 module.exports = function (options) {
-  const {defRoutesDir, implRoutesDir, implPluginsDir, autoMock, orders} = options
+  const {defRoutesDir, implRoutesDir, implPluginsDir, autoMock, orders = {}} = options
 
   return async function (fastify) {
     if (implPluginsDir) {

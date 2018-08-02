@@ -16,7 +16,7 @@ fastify.register(appPlugin)
 
 async function boot () {
   try {
-    await fastify.listen(appConfig.port, '0.0.0.0')
+    await fastify.listen(appConfig.app.port, '0.0.0.0')
     setupGracefulShutdown(fastify)
     fastify.log.info(`starting ${appName}...`)
   } catch (err) {
