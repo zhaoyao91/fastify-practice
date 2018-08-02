@@ -1,7 +1,6 @@
-const appRoot = require('app-root-path')
-
 const checkEnv = require('ck-env')
+const requireAppFile = require('./lib/require-app-file')
 
 module.exports = function (appName) {
-  checkEnv(appRoot.require(`./app/${appName}/env.js`))
+  checkEnv(requireAppFile(appName, 'env.js'))
 }

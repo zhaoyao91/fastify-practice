@@ -1,5 +1,5 @@
-const appRoot = require('app-root-path')
+const requireAppFile = require('./lib/require-app-file')
 
 module.exports = function (appName) {
-  return appRoot.require(`./app/${appName}/config.js`)
+  return requireAppFile(appName, 'config.js')
 }

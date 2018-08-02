@@ -1,11 +1,15 @@
 const fs = require('fs')
 const path = require('path')
-
+const listModuleNames = require('./lib/list-module-names')
 const buildMockRouteHandler = require('./build-mock-route-handler')
+const sortByOrder = require('./lib/sort-by-order')
 
 module.exports = async function (fastify, options) {
-  const {defDir, implDir, autoMock} = options
-  const routeNames = fs.readdirSync(defDir).map(name => path.parse(name).name)
+  const {defDir, implDir, autoMock, order} = options
+
+  let routeNames = listModuleNames(defDir)
+  if (order != null) routeNames = sortByOrder(routeNames, order)
+
   routeNames.forEach(routeName => {
     const api = require(path.resolve(defDir, routeName))
 
