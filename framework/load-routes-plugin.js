@@ -18,7 +18,7 @@ module.exports = async function (fastify, options) {
     try {
       buildHandler = require(handlerPath)
     } catch (err) {
-      if (err.message.startsWith('Cannot find module')) {
+      if (err.message === `Cannot find module '${handlerPath}'`) {
         if (autoMock) {
           buildHandler = buildMockRouteHandler
         } else {
